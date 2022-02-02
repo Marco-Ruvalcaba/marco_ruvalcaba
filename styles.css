@@ -1,0 +1,326 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #000;
+    margin: 0;
+
+    cursor: url(images/Cursor_Nave.svg), auto;
+}
+a{
+    cursor: url(images/Cursor_Astronaut.svg), auto;
+}
+/*SMOOTH SCROLL*/
+html{
+    scroll-behavior: smooth;
+}
+/* CONTENEDOR DE LAS PARTICULAS */
+.particulas_JS{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: -1;
+
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+/* MENU DE NAVEGACION - HEADER*/
+.header{
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 100vw;
+    /*minimo
+    maximo*/
+    height: 7vh;
+    /*minimo
+    maximo*/
+
+    background: #000;
+
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+    color: white;
+}
+nav{
+    width: 100vw;
+    font-family: 'Anton', sans-serif;
+    font-size: 2vh;
+    text-align: right;
+
+    background: transparent;
+    padding: 0 2vw;
+}
+nav > a{
+    color: #fff;
+    text-decoration: none;
+    margin-right: 1vw;
+}
+nav > a:hover{
+    color: rgb(82, 74, 197);
+    text-decoration: none;
+    margin-right: 1.5vw;
+    font-size: 2.5vh;;
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+/* PRESENTACION */
+.presentacion_seccion{
+    background: transparent;
+    align-items: center;
+    text-align: left;
+    font-family: 'Anton', sans-serif;
+    font-size: 50px;
+    color: white;
+
+    min-height: 100vh;
+}
+.presentacion_contenedor{
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: .5;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+}
+.presentacion_elemento{
+    background: transparent;
+    
+}
+.presentacion_elemento h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5vw;
+    color: #fff;
+}
+.presentacion_elemento h2{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 4vw;
+    color: #fff;
+}
+.presentacion_elemento img{
+    width: 25vw;
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+/* SOBRE MI */
+.sobreMi_seccion{
+    background: transparent;
+    align-items: center;
+    text-align: left;
+    font-family: 'Anton', sans-serif;
+    font-size: 50px;
+    color: white;
+
+    min-height: 100vh;
+}
+.sobreMi_contenedor{
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+}
+.sobreMi_elemento{
+    background: transparent;
+    margin: 0 0 0 0;
+    padding: 0 1vw 0 1vw;
+    
+}
+.sobreMi_elemento h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 8vw;
+    color: #fff;
+    margin: 0 0 0 0;
+}
+.sobreMi_elemento p{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5vw;
+    margin: 0 0 0 0;
+    max-width: 45vw;
+    text-align: justify;
+    color: #fff;
+}
+.sobreMi_elemento img{
+    width: 25vw;
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+/* PORTAFOLIO */
+.portafolio_seccion{
+    background: #64a273;
+    align-items: center;
+    text-align: left;
+    font-family: 'Anton', sans-serif;
+    font-size: 50px;
+    color: white;
+
+    min-height: 100vh;
+}
+.portafolio_contenedor{
+    background: rgb(175, 16, 93);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+}
+.portafolio_elemento{
+    background: sienna;
+    
+}
+.portafolio_elemento h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5vw;
+    color: #fff;
+}
+.portafolio_elemento p{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1vw;
+    max-width: 45vw;
+    text-align: justify;
+    color: #fff;
+}
+.sobreMi_elemento img{
+    width: 25vw;
+}
+
+.Portafolio_Galeria{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.Portafolio_Imagen{
+    width: 24%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+
+.Portafolio_Imagen > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.Portafolio_Hover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: hsla(273,91%,27%, 0.7);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Portafolio_Hover img{
+    width: 50px;
+}
+
+.Portafolio_Imagen:hover .Portafolio_Hover{
+    transform: scale(1);
+}
+
+
+
+
+
+
+
+
+
+
+.seccion_1{
+    background: #759;
+    align-items:center;
+    text-align:  left;
+    font-family: 'Anton', sans-serif;
+    font-size: 50px;
+    color: white;
+
+    min-height: 100vh;
+}
+.box{
+    background: rgb(16, 235, 16);
+
+    display: flex;
+    justify-content: space-around;
+}
+.item{
+    background: sienna;
+}
+
+
+
+
+
+
+
+
+
+
+/* CODIGO NECESARIO PARA EL EFECTO DE MAQUINA DE ESCRIBIR
+.contenedor
+h1
+h1 span
+typing_effect
+blink_effect
+*/
+.efecto_escribir{
+    background: transparent;
+    display: table;
+
+    margin: 0 0 0 0;
+
+    line-height: 1;
+}
+.efecto_escribir h1 {
+    font-family: monospace;
+    float: left;
+    color: #fff;
+    position: relative;
+    font-size: 8vw;
+
+    margin: 0 0 0 0;
+}
+.efecto_escribir span{
+    position: absolute;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: #000;
+    border-left: 2px solid #fff;
+
+    animation: typing_effect 4s steps(13) infinite alternate, blink_effect .5s infinite step-end;
+}
+@keyframes typing_effect {
+    from{
+        width: 100%;
+    } to {
+        width: 0;
+    }
+}
+@keyframes blink_effect {
+    50% { border-color: transparent; }
+}
+
+
