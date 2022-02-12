@@ -1,160 +1,300 @@
+/*----------------------------------------------------------------------------------------------------*/
+/* FUENTES UTILIZADAS */
+@font-face {
+    font-family: Nasa-Type;
+    src: url(fonts/Nasa-Type.otf);
+}
+@font-face {
+    font-family: Futura-Demi_Bold;
+    src: url(fonts/Futura-Demi_bold.otf);
+}
+@font-face {
+    font-family: Futura-Light;
+    src: url(fonts/Futura-Light.otf);
+}
+@font-face {
+    font-family: Helvetica-Medium;
+    src: url(fonts/Helvetica-Medium.otf);
+}
+@font-face {
+    font-family: Helvetica-Light;
+    src: url(fonts/Helvetica-Light.ttf);
+}
+
 *{
     padding: 0;
     box-sizing: border-box;
 }
+
+
+
+
 body{
     background: #000;
     margin: 0;
 
-    cursor: url(images/Cursor_Nave.svg), auto;
+    /* cursor: url(images/Cursor_Nave.svg), auto; */
 }
+/*
 a{
     cursor: url(images/Cursor_Astronaut.svg), auto;
-}
+}*/
+
+
+
+
+/*----------------------------------------------------------------------------------------------------*/
 /*SMOOTH SCROLL*/
 html{
     scroll-behavior: smooth;
 }
+
+/*----------------------------------------------------------------------------------------------------*/
 /* CONTENEDOR DE LAS PARTICULAS */
 .particulas_JS{
     height: 100vh;
     width: 100vw;
     position: fixed;
     z-index: -1;
-
 }
 
 /*----------------------------------------------------------------------------------------------------*/
 /* MENU DE NAVEGACION - HEADER*/
 .header{
+    /* TAMAÑO */
+    width: 100vw;
+    height: 6vh;
+    padding: 0;
+
+    /* POSICION */
     position: fixed;
     left: 0;
     top: 0;
+    z-index: 100;
 
-    width: 100vw;
-    /*minimo
-    maximo*/
-    height: 7vh;
-    /*minimo
-    maximo*/
-
-    background: #000;
-
-    padding: 0;
+    /* CONTENIDO */
     display: flex;
     align-items: center;
 
-    color: white;
+    /* ASPECTO */
+    background: #000;
 }
 nav{
-    width: 100vw;
-    font-family: 'Anton', sans-serif;
-    font-size: 2vh;
-    text-align: right;
+    /* TAMAÑO */
+    width: 100%;
+    padding: 0 20px;
 
+    /* ASPECTO */
     background: transparent;
-    padding: 0 2vw;
+
+    font-family: Futura-Light;
+    text-align: right;
 }
 nav > a{
     color: #fff;
     text-decoration: none;
     margin-right: 1vw;
+    font-size: 2vh;
 }
-nav > a:hover{
+nav a:hover{
     color: rgb(82, 74, 197);
     text-decoration: none;
     margin-right: 1.5vw;
-    font-size: 2.5vh;;
+    font-size: 2.5vh;
 }
 
 /*----------------------------------------------------------------------------------------------------*/
 /* PRESENTACION */
 .presentacion_seccion{
-    background: transparent;
-    align-items: center;
-    text-align: left;
-    font-family: 'Anton', sans-serif;
-    font-size: 50px;
-    color: white;
+    /* TAMAÑO */
+    width: 100vw;
+    height: 100vh;
 
-    min-height: 100vh;
+    position: relative;
+
+    /* CONTENIDO */
+    display: flex;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
+
+    /* ASPECTO */
+    background: #000;
 }
 .presentacion_contenedor{
-    background: transparent;
+    /* TAMAÑO */
+    width: 100%;
+    height: 80%;
+    padding: 20px 20px 20px 20px;
+
+    position: relative;
+
+    /* CONTENIDO */    
     display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: .5;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
 
-    min-height: 100vh;
+    line-height: .1;
+    color: #fff;
 
+    /* ASPECTO */ 
+    background: transparent;
     overflow: hidden;
 }
 .presentacion_elemento{
+    width: 80%;
+
     background: transparent;
-    
 }
 .presentacion_elemento h1{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 5vw;
-    color: #fff;
+    font-family: Nasa-Type;
+    font-size: 10vw;
 }
 .presentacion_elemento h2{
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 4vw;
-    color: #fff;
+    font-family: Helvetica-Medium;
+    font-size: 6vw;
 }
-.presentacion_elemento img{
-    width: 25vw;
+.presentacion_elemento p{
+    font-family: Helvetica-Light;
+    font-size: 5vw;
+}
+.presentacion_seccion img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    pointer-events: none;
 }
 
 /*----------------------------------------------------------------------------------------------------*/
 /* SOBRE MI */
 .sobreMi_seccion{
-    background: transparent;
-    align-items: center;
-    text-align: left;
-    font-family: 'Anton', sans-serif;
-    font-size: 50px;
-    color: white;
+    /* TAMAÑO */
+    width: 100vw;
+    height: 100vh;
 
-    min-height: 100vh;
-}
-.sobreMi_contenedor{
-    background: transparent;
-
+    /* CONTENIDO */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
 
-    min-height: 100vh;
+    /* ASPECTO */
+    background: transparent;
+}
+.sobreMi_contenedor{    
+    /* TAMAÑO */
+    width: 80%;
+    height: 80%;
+    padding: 20px 20px 20px 20px;
+
+    /* CONTENIDO */    
+    display: flex;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
+
+    color: #fff;
+
+    /* ASPECTO */ 
+    background: transparent;
+    overflow: hidden;
 }
 .sobreMi_elemento{
     background: transparent;
-    margin: 0 0 0 0;
-    padding: 0 1vw 0 1vw;
-    
+    padding: 0 2% 0 2%;
+
+    color: #fff;    
 }
 .sobreMi_elemento h1{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Futura-Demi_Bold;
     font-size: 8vw;
-    color: #fff;
     margin: 0 0 0 0;
 }
 .sobreMi_elemento p{
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Futura-Light;
     font-size: 1.5vw;
-    margin: 0 0 0 0;
     max-width: 45vw;
     text-align: justify;
-    color: #fff;
+    margin: 0 0 0 0;
 }
 .sobreMi_elemento img{
     width: 25vw;
 }
 
+
+
+
 /*----------------------------------------------------------------------------------------------------*/
-/* PORTAFOLIO */
+/* CONJUNTO DE HABILIDADES */
+.Portafolio_seccion{
+    /* TAMAÑO */
+    width: 100vw;
+    min-height: 100vh;
+
+    /* CONTENIDO */
+    display: flex;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
+
+    /* ASPECTO */
+    background: #3836f2;
+}
+.Portafolio_contenedor{    
+    /* TAMAÑO */
+    width: 70%;
+    padding: 20px 20px 20px 20px;
+
+    /* CONTENIDO */    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
+
+    /* ASPECTO */ 
+    background: #64a273;
+    overflow: hidden;
+}
+.Portafolio_elemento{
+    width: 80%;
+
+    background: #759;
+    padding: 0 2% 0 2%;
+    
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Portafolio_elemento_img{
+    width: 500px;
+}
+.Portafolio_texto{
+    color: #fff;
+    text-align: justify;
+    background: #000;
+}
+.Portafolio_texto h1{
+    font-family: Futura-Demi_Bold;
+    font-size: 3vw;
+    margin: 0 0 0 0;
+}
+.Portafolio_texto h2{
+    font-family: Futura-Demi_Bold;
+    font-size: 2vw;
+    margin: 0 0 0 0;
+}
+.Portafolio_texto p{
+    font-family: Futura-Light;
+    font-size: 1vw;
+    max-width: 45vw;
+    margin: 0 0 0 0;
+}
+/*
+/*----------------------------------------------------------------------------------------------------*/
+/* PORTAFOLIO 
 .portafolio_seccion{
     background: #64a273;
     align-items: center;
@@ -191,9 +331,6 @@ nav > a:hover{
     max-width: 45vw;
     text-align: justify;
     color: #fff;
-}
-.sobreMi_elemento img{
-    width: 25vw;
 }
 
 .Portafolio_Galeria{
@@ -239,6 +376,218 @@ nav > a:hover{
 .Portafolio_Imagen:hover .Portafolio_Hover{
     transform: scale(1);
 }
+*/
+
+
+
+
+
+
+
+
+/*----------------------------------------------------------------------------------------------------*/
+/* CONJUNTO DE HABILIDADES */
+.conjuntoDeHabilidades_seccion{
+    /* TAMAÑO */
+    width: 100vw;
+    height: 100vh;
+
+    /* CONTENIDO */
+    display: flex;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
+
+    /* ASPECTO */
+    background: #fff;
+}
+.conjuntoDeHabilidades_contenedor{    
+    /* TAMAÑO */
+    width: 60%;
+    height: 80%;
+    padding: 20px 20px 20px 20px;
+
+    /* CONTENIDO */    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
+
+    /* ASPECTO */ 
+    background: #64a273;
+    overflow: hidden;
+}
+.conjuntoDeHabilidades_elemento{
+    width: 25%;
+    height: 25%;
+
+    background: #759;
+    padding: 0 2% 0 2%;
+    
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+.conjuntoDeHabilidades_elemento img{
+    width: 100%;
+    height: 100%;
+
+    padding: 10px 10px 10px 10px;
+}
+
+
+
+
+
+
+/*----------------------------------------------------------------------------------------------------*/
+/* EXPERIENCIA */
+.Experiencia_seccion{
+    /* TAMAÑO */
+    width: 100vw;
+    min-height: 100vh;
+
+    /* CONTENIDO */
+    display: flex;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
+
+    /* ASPECTO */
+    background: transparent;
+}
+.Experiencia_contenedor{
+    /* TAMAÑO */
+    width: 80%;
+    height: 80%;
+    padding: 80px 20px 20px 20px;
+
+    /* CONTENIDO */    
+    display: flex;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
+
+    color: #fff;
+
+    /* ASPECTO */ 
+    background: transparent;
+    overflow: hidden;
+}
+.Experiencia_elemento{
+    width: 100%;
+
+    background: #fff;
+    margin: 0;
+    padding: 4% 4% 4% 4%;
+
+    border-radius: 20px;
+
+}
+.Experiencia_elemento h1{
+    font-family: Nasa-Type;
+    font-size: 4vw;
+    background: #339DC5;
+    margin: 0;
+}
+.Experiencia_elemento h2{
+    font-family: Helvetica-Medium;
+    font-size: 3vw;
+    background: #64a273;
+    margin: 0;
+}
+.Experiencia_elemento h3{
+    font-family: Helvetica-Light;
+    font-size: 2vw;
+    background: #339DC5;
+    margin: 0;
+}
+.Experiencia_elemento h4{
+    font-family: Futura-Light;
+    font-size: 2vw;
+
+    background: #64a273;
+    margin: 0;
+}
+.Experiencia_elemento p{
+    font-family: Futura-Light;
+    font-size: 20px;
+    background: #339DC5;
+    margin: 0;
+}
+
+
+
+/*----------------------------------------------------------------------------------------------------*/
+/* EDUCACION */
+.Educacion_seccion{
+    /* TAMAÑO */
+    width: 100vw;
+    min-height: 100vh;
+
+    /* CONTENIDO */
+    display: flex;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
+
+    /* ASPECTO */
+    background: #64a273;
+}
+.Educacion_contenedor{
+    /* TAMAÑO */
+    width: 80%;
+    height: 80%;
+    padding: 80px 20px 20px 20px;
+
+    /* CONTENIDO */    
+    display: flex;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
+
+    color: #fff;
+
+    /* ASPECTO */ 
+    background: transparent;
+    overflow: hidden;
+}
+.Educacion_elemento{
+    width: 100%;
+
+    background: #fff;
+    margin: 0;
+    padding: 4% 4% 4% 4%;
+
+    border-radius: 20px;
+
+}
+.Educacion_elemento h1{
+    font-family: Nasa-Type;
+    font-size: 4vw;
+    background: #339DC5;
+    margin: 0;
+}
+.Educacion_elemento h2{
+    font-family: Helvetica-Medium;
+    font-size: 3vw;
+    background: #64a273;
+    margin: 0;
+}
+.Educacion_elemento h3{
+    font-family: Helvetica-Light;
+    font-size: 2vw;
+    background: #339DC5;
+    margin: 0;
+}
+.Educacion_elemento h4{
+    font-family: Futura-Light;
+    font-size: 2vw;
+
+    background: #64a273;
+    margin: 0;
+}
+.Educacion_elemento p{
+    font-family: Futura-Light;
+    font-size: 20px;
+    background: #339DC5;
+    margin: 0;
+}
 
 
 
@@ -248,7 +597,130 @@ nav > a:hover{
 
 
 
+/*----------------------------------------------------------------------------------------------------*/
+/* CONTACTO */
+.contacto_seccion{
+     /*position: fixed;*/
+     width: 100vw;
+     height: 100vh;
+     background: #339DC5;
+     padding: 0;
+    /*background: transparent;*/
+    display: flex;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
+}
+.contacto_contenedor{
+    background: turquoise;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: .5;
+    width: 85%;
+    height: 80%;
+    overflow: hidden;
+}
+.contacto_elemento{
+    text-align: justify;
+    padding: 5% 5% 5% 5%;
+    background: tomato;
+    width: 100%;
+}
+.contacto_elemento img{
+    height: 5%;
+    object-fit: contain;
+}
 
+.form{
+    background-color: #fff;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 2em 3em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0  / 30%);
+    text-align: center;
+}
+.form__title{
+    font-size: 2rem;
+    margin-bottom: .5em;
+}
+.form__paragraph{
+    font-weight: 300;
+}
+.form__link{
+    font-weight: 400;
+    color: #000;
+}
+.form__container{
+    margin-top: 1em;
+    display: grid;
+    gap: 1em;
+}
+.form__group{
+    position: relative;
+    --color: #5757577e;
+}
+.form__input{
+    width: 100%;
+    background: none;
+    color: #706c6c;
+    font-size: 1rem;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+    font-family: cursive;
+}
+.form__input:focus + .form__label,
+.form__input:not(:placeholder-shown) + .form__label{
+    transform: translateY(-12px) scale(.7);
+    transform-origin: left top;
+    color: #3836f2;
+}
+
+.form__label{
+    color: var(--color);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(10px);
+    transition: transform .5s, color .3s;
+
+}
+.form__submit{
+    background: #3866f2;
+    color: #fff;
+    font-family: monospace;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8rem 0;
+    border: none;
+    border-radius: .5rem;
+}
+.form__line{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #3866f2;
+    transform: scale(0);
+    transform: left bottom;
+    transition: transform .4s;
+}
+
+.form__input:focus ~ .form__line,
+.form__input:not(:placeholder-shown) ~ .form__line{
+    transform: scale(1);
+    
+}
+
+
+/*----------------------------------------------------------------------------------------------------*/
+/* CODIGO DE REFERENCIA PARA ENTENDER FLEXBOX */
 .seccion_1{
     background: #759;
     align-items:center;
@@ -271,13 +743,57 @@ nav > a:hover{
 
 
 
+/*----------------------------------------------------------------------------------------------------*/
+/* BARRA SOCIAL */
+.barra_social{
+    position: fixed;
+    right: 0;
+    top: 40%;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 100;
+}
+.icon{
+    color: #fff;
+    text-decoration: none;
+    padding: .7rem;
+    display: flex;
+    transition: all .2s;
+    background: #2A3F4B;
+}/*
+.icon-github{
+    background: #2A3F4B;
+}
+.icon-linkedin2{
+    background: #0a66c2;
+}
+.icon-facebook{
+    background: #2E406E;
+}
+.icon-twitter{
+    background: #339DC5;
+}
+.icon-youtube{
+    background: #E83028;
+}
+.icon-instagram{
+    background: #3f60a5;
+}*/
+.icon:first-child{
+    border-radius: 1rem 0 0 0;
+}
+.icon:last-child{
+    border-radius: 0 0 0 1rem;
+}
+.icon:hover{
+    padding-right: 3rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 .5 rgba(0, 0, 0, 0.42);
+}
 
-
-
-
-
-
-
+/*----------------------------------------------------------------------------------------------------*/
 /* CODIGO NECESARIO PARA EL EFECTO DE MAQUINA DE ESCRIBIR
 .contenedor
 h1
@@ -322,5 +838,3 @@ blink_effect
 @keyframes blink_effect {
     50% { border-color: transparent; }
 }
-
-
