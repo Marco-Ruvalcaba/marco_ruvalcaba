@@ -118,6 +118,7 @@ html{
 
     /* ASPECTO */
     background: #000;
+    overflow: hidden;
 }
 nav{
     /* TAMAÑO */
@@ -149,11 +150,19 @@ nav a:hover{
 /*----------------------------------------------------------------------------------------------------*/
 /* APLICA PARA TODO EL DOCUMENTO */
 .Seccion_Generica{
+    /* TAMAÑO */
     min-width: 100vw;
     max-width: 100vw;
     min-height: 100vh;
 
+    /* CONTENIDO */
+    display: flex;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
+
+    /* ASPECTO */
     background: transparent;
+    overflow: hidden;
 }
 
 .Contenedor_Generico{
@@ -191,6 +200,7 @@ nav a:hover{
 
     /* ASPECTO */
     background: #000;
+    overflow: hidden;
 }
 .presentacion_contenedor{
     /* TAMAÑO */
@@ -246,6 +256,7 @@ nav a:hover{
 
     /* ASPECTO */
     background: transparent;
+    overflow: hidden;
 }
 .sobreMi_contenedor{    
     /* TAMAÑO */
@@ -294,7 +305,7 @@ nav a:hover{
 .conjuntoDeHabilidades_seccion{
     /* TAMAÑO */
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
 
     /* CONTENIDO */
     display: flex;
@@ -302,14 +313,29 @@ nav a:hover{
     justify-content: center;  /* ALINEACION HORIZONTAL*/
 
     /* ASPECTO */
-    background: #fff;
+    background: transparent;
+    overflow: hidden;
+}
+.ConjuntoDeHabilidades_Contenedor{    
+    /* TAMAÑO */
+    width: 75%;
+    min-height: 80%;
+    padding: 5% 20px 20px 20px;
+
+    /* CONTENIDO */    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
+    flex-direction: column;
+
+    /* ASPECTO */ 
+    overflow: hidden;
     background: transparent;
 }
-.conjuntoDeHabilidades_contenedor{    
+.ConjuntoDeHabilidades_Cuadricula{    
     /* TAMAÑO */
-    width: 80%;
-    height: 80%;
-    padding: 20px 20px 20px 20px;
+    width: 100%;
 
     /* CONTENIDO */    
     display: flex;
@@ -323,19 +349,26 @@ nav a:hover{
 }
 .conjuntoDeHabilidades_elemento{
     width: 25%;
-    height: 25%;
 
-    padding: 0 2% 0 2%;
-    
+    padding: 1% 2% 1% 2%;
+
+    display: flex;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
+
     background: transparent;
 }
 .conjuntoDeHabilidades_elemento img{
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    max-width: 140px;
 
     padding: 10px 10px 10px 10px;
 }
-
+.conjuntoDeHabilidades_seccion span{
+    color: #fff;
+    font-family: Helvetica-Medium;
+    font-size: 3vw;
+}
 
 /*----------------------------------------------------------------------------------------------------*/
 /* PORTAFOLIO */
@@ -353,6 +386,7 @@ nav a:hover{
     background: #3836f2;
     /**/
     background: transparent;
+    overflow: hidden;
 }
 .Portafolio_contenedor{    
     /* TAMAÑO */
@@ -433,6 +467,7 @@ nav a:hover{
 
     /* ASPECTO */
     background: transparent;
+    overflow: hidden;
 }
 .Experiencia_Educacion_Contenedor{
     /* TAMAÑO */
@@ -504,6 +539,7 @@ nav a:hover{
      width: 100vw;
      height: 100vh;
      background: #339DC5;
+     overflow: hidden;
      padding: 0;
     /*background: transparent;*/
     display: flex;
