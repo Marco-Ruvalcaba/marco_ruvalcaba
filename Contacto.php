@@ -1,21 +1,31 @@
 <?php
-$nombre
-$empresa
-$correo
-$asunto
-$mensaje
+//$nombre = $_POST['nombre'];
+//$empresa  = $_POST['nombre'];
+//$correo  = $_POST['nombre'];
+//$asunto = $_POST['nombre'];
+//$mensaje = $_POST['nombre'];
 
-$header =  "From: " . $mail . "\r\n";
-$header .= "X-mailer: PHP/" . phpversion() . "\r\n";
-$header .= "Mime-Version: 1.0 \r\n";
-$header .= "Content-Type: text/plain";
+$nombre = "Marco Ruvalcaba";
+$empresa = "Freelancer";
+$correo = "marco.ruvalcaba.angel@gmail.com";
+$asunto = "Correo de prueba";
+$mensaje = "Esto es un correo de prueba";
 
-$message =  "Este mensaje fue enviado por:" . $nombre . "\r\n"
+$destinatario = "marco.ruvalcaba.angel@gmail.com";
+
+$header =  " ---- HEADER ---- ". "<br>";
+$header .= "Nombre:" . $nombre . "<br>";
+$header .= "Empresa:". $empresa. "<br>";
+$header .= "Correo:" . $correo . "<br>";
+$header .= "Asunto:" . $asunto . "<br>";
+$header .= "<br>";
 
 
-$para = "marco.ruvalcaba.angel@gmail.com"
+//mail($destinatario, $asunto, $mensaje, $header);
 
-mail($para, $asunto, utf8_decode($message), $header)
+echo $header;
+echo $mensaje;
 
-header("Location:index.html")
+//header("Location:index.html");
+
 ?>
