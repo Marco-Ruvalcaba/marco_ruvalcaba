@@ -15,7 +15,8 @@ $message =  "Este mensaje fue enviado por:" . $nombre . "\r\n";
 
 $para = "marco.ruvalcaba.angel@gmail.com";
 
-mail($para, $asunto, utf8_decode($message), $header);
-
+mail($para, $asunto, $message, $header);
+echo "<script> ('correo enviado exitosamente') </script>";
+echo "<script> setTimeout(\"location.href='index.html'\",100) </script>";
 
 ?>
