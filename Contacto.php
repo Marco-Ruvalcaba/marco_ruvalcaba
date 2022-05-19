@@ -1,9 +1,9 @@
 <?php
 //$nombre = $_POST['nombre'];
-//$empresa  = $_POST['nombre'];
-//$correo  = $_POST['nombre'];
-//$asunto = $_POST['nombre'];
-//$mensaje = $_POST['nombre'];
+//$empresa = $_POST['empresa'];
+//$correo = $_POST['correo'];
+//$asunto = $_POST['asunto'];
+//$mensaje = $_POST['mensaje'];
 
 $nombre = "Marco Ruvalcaba";
 $empresa = "Freelancer";
@@ -14,10 +14,10 @@ $mensaje = "Esto es un correo de prueba";
 $destinatario = "marco.ruvalcaba.angel@gmail.com";
 
 $header =  " ---- HEADER ---- ". "<br>";
-$header .= "Nombre:" . $nombre . "<br>";
-$header .= "Empresa:". $empresa. "<br>";
-$header .= "Correo:" . $correo . "<br>";
-$header .= "Asunto:" . $asunto . "<br>";
+$header .= "Nombre: " . $nombre . "<br>";
+$header .= "Empresa: ". $empresa. "<br>";
+$header .= "Correo: " . $correo . "<br>";
+$header .= "Asunto: " . $asunto . "<br>";
 $header .= "<br>";
 
 
