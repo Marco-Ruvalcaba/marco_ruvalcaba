@@ -167,13 +167,6 @@ nav a:hover{
     background: transparent;
 }
 
-.Ilustracion_Imagen{
-    width: 90vw;
-    height: 100vh;
-}
-
-
-
 
 /*----------------------------------------------------------------------------------------------------*/
 /* PRESENTACION */
@@ -592,32 +585,6 @@ nav a:hover{
 
 
 /*----------------------------------------------------------------------------------------------------*/
-/* CODIGO DE REFERENCIA PARA ENTENDER FLEXBOX */
-.seccion_1{
-    background: #759;
-    align-items:center;
-    text-align:  left;
-    font-family: 'Anton', sans-serif;
-    font-size: 50px;
-    color: white;
-
-    min-height: 90vh;
-}
-.box{
-    background: rgb(16, 235, 16);
-
-    display: flex;
-    justify-content: space-around;
-}
-.item{
-    background: sienna;
-}
-
-
-
-
-
-/*----------------------------------------------------------------------------------------------------*/
 /* CODIGO NECESARIO PARA EL EFECTO DE MAQUINA DE ESCRIBIR */
 .efecto_escribir{
     background: transparent;
@@ -658,86 +625,7 @@ nav a:hover{
 }
 
 
-.seccion_slider{
-    padding: 6vh 0 0 0;
-    width: 100vw;
-    height: 100vh;
-    background: transparent;
-    display: flex;
-    align-items: center;      /* ALINEACION VERTICAL*/
-    justify-content: center;  /* ALINEACION HORIZONTAL*/
-    background: #64a273;
-}
-.contenedor{
-    width: 90%;
-    height: 100%;
-}
-ul, li{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
 
-ul.slider{
-    position: relative;
-    width: 90%;
-    height: 90%;
-}
-ul.slider li{
-    position: absolute;
-    opacity: 0;
-    width: 90%;
-    height: 100%;
-    transition: opacity 1s;
-    display: flex;
-    align-items: center;      /* ALINEACION VERTICAL*/
-    justify-content: center;  /* ALINEACION HORIZONTAL*/
-}
-ul.slider li img{
-    max-width: 90%;
-    max-height: 100%;
-    object-fit: cover;
-}
-ul.slider li:first-child{
-    opacity: 0;
-}
-ul.slider li:target{
-    opacity: 1;
-}
-
-.menu_slider{
-    text-align: center;
-    margin: 20px;
-    position: relative;
-}
-.menu_slider li{
-    display: inline-block;
-}
-.menu_slider li a{
-    text-decoration: none;
-    background: #fff;
-    color: #fff;
-    width: 50px;    
-    height: 50px;
-    border-radius: 100%;
-    display: flex;
-    align-items: center;      /* ALINEACION VERTICAL*/
-    justify-content: center;  /* ALINEACION HORIZONTAL*/
-}
-
-@keyframes cambios{
-    0%{ margin-left: 0; }
-    20%{  margin-left: 0; }
-
-    25%{ margin-left: -100%; }
-    45%{ margin-left: -100%; }
-    
-    50%{ margin-left: -200%; }
-    70%{ margin-left: -200%; }
-    
-    75%{ margin-left: -300%; }
-    95%{ margin-left: -300%;}
-}
 
 
 .Contenedor_Cuadros{
