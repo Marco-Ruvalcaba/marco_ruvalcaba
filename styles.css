@@ -143,8 +143,6 @@ nav a:hover{
 }
 
 
-
-
 /*----------------------------------------------------------------------------------------------------*/
 /* APLICA PARA TODO EL DOCUMENTO */
 .Seccion_Generica{
@@ -256,54 +254,101 @@ nav a:hover{
     width: 100%;
 }
 
+/*----------------------------------------------------------------------------------------------------*/
+/* PORTAFOLIO */
+.Contenedor_Cuadros{
+    width: 100%;
+    height: 100%;
 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
 
+    background: #fff;
+}
+.Cuadro{
+    width: 23%;
+    height: 23%;
+    margin: .5%;
+    border-radius: 2rem 2rem 2rem 2rem;
+
+    background: #000;
+}
+.Cuadro:hover{
+    opacity: 60%;
+}
+.Cuadro:first-child{
+    background: #c50909;
+}
+.Cuadro:nth-child(2){
+    background: #1310d3;
+}
+.Cuadro:nth-child(3){
+    background: #f1f518;
+}
+.Cuadro:nth-child(4){
+    background: #009e22;
+}
+.Cuadro img{
+    width: 100%;
+    height: 100%;
+}
 
 /*----------------------------------------------------------------------------------------------------*/
 /* CONJUNTO DE HABILIDADES */
+.Seccion_ConjuntoDeHabilidades{
+    /* TAMAÑO */
+    width: 100vw;
+    height: 100vh;
+    padding: 6vh 0 0 0;
+
+    /* CONTENIDO */
+    display: flex;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
+
+    /* ASPECTO */
+    background: transparent;
+}
 .ConjuntoDeHabilidades_Contenedor{    
     /* TAMAÑO */
     width:100%;
     height: 100%;
-    padding: 0;
 
     /* CONTENIDO */    
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;      /* ALINEACION VERTICAL*/
     justify-content: center;  /* ALINEACION HORIZONTAL*/
-    flex-direction: column;
 
     /* ASPECTO */ 
     overflow: hidden;
     background: transparent;
+    background: #009e22;
 }
 .ConjuntoDeHabilidades_Cuadricula{    
-    /* TAMAÑO */
     width: 100%;
+    height: 100%;
 
-    /* CONTENIDO */    
     display: flex;
     flex-wrap: wrap;
     align-items: center;      /* ALINEACION VERTICAL*/
     justify-content: center;  /* ALINEACION HORIZONTAL*/
 
-    /* ASPECTO */ 
-    background: transparent;
+    background: #fff;
 }
 .conjuntoDeHabilidades_elemento{
-    width: 25%;
+    width: 23%;
+    height: 11rem;
+    margin: .5%;
+    border-radius: 2rem 2rem 2rem 2rem;
 
-    display: flex;
-    align-items: center;      /* ALINEACION VERTICAL*/
-    justify-content: center;  /* ALINEACION HORIZONTAL*/
-
-    background: transparent;
+    background: #000;
 }
 .conjuntoDeHabilidades_elemento img{
     width: 100%;
-    max-width: 140px;
-    padding: 5% 5% 5% 5%;
+    height: 100%;
 }
 .ConjuntoDeHabilidades_Contenedor span{
     color: #fff;
@@ -313,155 +358,6 @@ nav a:hover{
 
 
 
-
-
-
-/*----------------------------------------------------------------------------------------------------*/
-/* PORTAFOLIO */
-.Portafolio_seccion{
-    /* TAMAÑO */
-    width: 90vw;
-    min-height: 100vh;
-
-    /* CONTENIDO */
-    display: flex;
-    align-items: center;      /* ALINEACION VERTICAL*/
-    justify-content: center;  /* ALINEACION HORIZONTAL*/
-
-    /* ASPECTO */
-    background: #3836f2;
-    /**/
-    background: transparent;
-    overflow: hidden;
-}
-.Portafolio_contenedor{    
-    /* TAMAÑO */
-    width: 75%;
-    padding: 5% 20px 20px 20px;
-    
-    /* CONTENIDO */    
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;      /* ALINEACION VERTICAL*/
-    justify-content: center;  /* ALINEACION HORIZONTAL*/
-
-    /* ASPECTO  */ 
-    background: #64a273;
-    /**/
-    background: transparent;
-    overflow: hidden;
-}
-.Portafolio_elemento{
-    width: 90%;
-
-    background: #759;
-    /**/
-    background: transparent;
-    padding: 4% 2% 4% 2%;
-    
-    border-width: 5px;
-    border-style: solid;
-    border-color: #fff;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.Portafolio_elemento_img{
-    width: 500px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #fff;
-}
-.Portafolio_texto{
-    padding: 2% 2% 2% 2%;
-    color: #fff;
-    text-align: justify;
-    background: #000;
-}
-.Portafolio_texto h1{
-    font-family: Futura-Demi_Bold;
-    font-size: 3vw;
-    margin: 0 0 0 0;
-}
-.Portafolio_texto h2{
-    font-family: Futura-Demi_Bold;
-    font-size: 2vw;
-    margin: 0 0 0 0;
-}
-.Portafolio_texto p{
-    font-family: Futura-Light;
-    font-size: 1vw;
-    max-width: 45vw;
-    margin: 0 0 0 0;
-}
-
-
-
-
-/*----------------------------------------------------------------------------------------------------*/
-/* EXPERIENCIA - EDUCACION*/
-.Experiencia_Educacion_Seccion{
-    /* TAMAÑO */
-    width: 100vw;
-    padding: 6vh 0 0 0;
-
-    /* CONTENIDO */
-    display: flex;
-    justify-content: center;  /* ALINEACION HORIZONTAL*/
-
-    /* ASPECTO */
-}
-.Experiencia_Educacion_Contenedor{
-    /* TAMAÑO */
-    width: 90%;
-    min-height: 100vh;
-    padding: 1% 1% 1% 1%;
-
-    /* CONTENIDO */    
-
-    border-width: 5px;
-    border-style: solid;
-    border-color: #fff;
-
-    /* ASPECTO */ 
-    
-    color: #000;
-    background: #fff;
-}
-.Experiencia_Educacion_Elemento{
-    width: 100%;
-}
-.Experiencia_Educacion_Contenedor h1{
-    font-family: Helvetica-Medium;
-    font-size: 60px;
-    margin: 0;
-    padding: 0;
-}
-.Experiencia_Educacion_Elemento h2{
-    font-family: Helvetica-Medium;
-    font-size: 45px;
-    margin: 0;
-    padding: 0;
-}
-.Experiencia_Educacion_Elemento h3{
-    font-family: Helvetica-Light;
-    font-size: 30px;
-    margin: 0;
-    padding: 0;
-}
-.Experiencia_Educacion_Elemento h4{
-    font-family: Futura-Light;
-    font-size: 30px;
-    margin: 0;
-    padding: 0;
-}
-.Experiencia_Educacion_Elemento p{
-    font-family: Futura-Light;
-    font-size: 25px;
-    margin: 0;
-    padding: 0;
-}
 
 /*----------------------------------------------------------------------------------------------------*/
 /* CONTACTO */
@@ -486,6 +382,9 @@ nav a:hover{
     height: 5%;
     object-fit: contain;
 }
+
+
+
 
 .form{
     background-color: #fff;
@@ -574,16 +473,6 @@ nav a:hover{
 }
 
 
-
-
-
-
-
-
-
-
-
-
 /*----------------------------------------------------------------------------------------------------*/
 /* CODIGO NECESARIO PARA EL EFECTO DE MAQUINA DE ESCRIBIR */
 .efecto_escribir{
@@ -628,37 +517,3 @@ nav a:hover{
 
 
 
-.Contenedor_Cuadros{
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;      /* ALINEACION VERTICAL*/
-    justify-content: center;  /* ALINEACION HORIZONTAL*/
-
-    background: #1310d3;
-}
-.Cuadro{
-    width: 50%;
-    height: 50%;
-}
-.Cuadro:hover{
-    opacity: 60%;
-}
-.Cuadro:first-child{
-    background: #c50909;
-}
-.Cuadro:nth-child(2){
-    background: #1310d3;
-}
-.Cuadro:nth-child(3){
-    background: #f1f518;
-}
-.Cuadro:nth-child(4){
-    background: #009e22;
-}
-.Cuadro img{
-    width: 100%;
-    height: 100%;
-}
