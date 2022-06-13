@@ -1,5 +1,3 @@
-/*----------------------------------------------------------------------------------------------------*/
-/* FUENTES UTILIZADAS */
 @font-face {
     font-family: Nasa-Type;
     src: url(fonts/Nasa-Type.otf);
@@ -21,6 +19,13 @@
     src: url(fonts/Helvetica-Light.ttf);
 }
 
+/*----------------------------------------------------------------------------------------------------*/
+html{
+    scroll-behavior: smooth; /*SMOOTH SCROLL*/
+}
+::-webkit-scrollbar {
+    display: none;
+}  
 body{
     background: #000;
     max-width: 100vw;
@@ -30,14 +35,7 @@ body{
 }
 
 /*----------------------------------------------------------------------------------------------------*/
-/*SMOOTH SCROLL*/
-html{
-    scroll-behavior: smooth;
-}
-
-/*----------------------------------------------------------------------------------------------------*/
-/* CONTENEDOR DE LAS PARTICULAS */
-.particulas_JS{
+.particulas_JS{       /* CLASE PARA EL CONTENEDOR DE LAS PARTICULAS */
     height: 100%;
     width: 100%;
     position: fixed;
@@ -45,8 +43,7 @@ html{
 }
 
 /*----------------------------------------------------------------------------------------------------*/
-/* BARRA SOCIAL */
-.barra_social{
+.barra_social{        /* BARRA SOCIAL */
     position: fixed;
     right: 0;
     top: 40%;
@@ -73,15 +70,10 @@ html{
 .icon-facebook{
     background: #2E406E;
 }
-.icon-twitter{
-    background: #339DC5;
-}
 .icon-youtube{
     background: #E83028;
 }
-.icon-instagram{
-    background: #3f60a5;
-}*/
+*/
 .icon:first-child{
     border-radius: 1rem 0 0 0;
 }
@@ -94,11 +86,8 @@ html{
     box-shadow: 0 0 .5 rgba(0, 0, 0, 0.42);
 }
 
-
-
 /*----------------------------------------------------------------------------------------------------*/
-/* MENU DE NAVEGACION - HEADER*/
-.header{
+.header{        /* MENU DE NAVEGACION - HEADER*/
     /* TAMAÑO */
     width: 100%;
     height: 6vh;
@@ -153,6 +142,7 @@ nav a:hover{
 
     /* CONTENIDO */
     display: flex;
+    flex-wrap: wrap;
     align-items: center;      /* ALINEACION VERTICAL*/
     justify-content: center;  /* ALINEACION HORIZONTAL*/
 
@@ -160,61 +150,47 @@ nav a:hover{
     background: transparent;
     overflow: hidden;
 }
-.Contenedor_Generico{
-    height: 80%;
-    background: transparent;
-}
-
 
 /*----------------------------------------------------------------------------------------------------*/
-/* PRESENTACION */
-.presentacion_contenedor{
+.presentacion_contenedor{        /* PRESENTACION */
     /* TAMAÑO */
     width: 100%;
     height: 100%;
-    padding: 20px 20px 20px 20px;
+    padding: 0 0 0 10%;
 
-    position: relative;
+     /* CONTENIDO */    
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;      /* ALINEACION VERTICAL*/
+     justify-content: center;      /* ALINEACION HORIZONTAL*/
 
-    /* CONTENIDO */    
-    display: flex;
-    align-items: center;      /* ALINEACION VERTICAL*/
-    justify-content: center;  /* ALINEACION HORIZONTAL*/
-
-    line-height: .1;
+    line-height: 0;    
     color: #fff;
 
     /* ASPECTO */ 
     background: #000;
     overflow: hidden;
 }
-.presentacion_elemento{
-    width: 80%;
-    background: transparent;
-}
-.presentacion_elemento h1{
+.presentacion_contenedor h1{
     font-family: Nasa-Type;
     font-size: 10vw;
 }
-.presentacion_elemento h2{
+.presentacion_contenedor h2{
     font-family: Helvetica-Medium;
     font-size: 6vw;
 }
-.presentacion_elemento p{
+.presentacion_contenedor p{
     font-family: Helvetica-Light;
     font-size: 5vw;
 }
 
 
-
-
 /*----------------------------------------------------------------------------------------------------*/
-/* SOBRE MI */
-.sobreMi_contenedor{    
+.sobreMi_contenedor{        /* SOBRE MI */    
     /* TAMAÑO */
     width: 100%;
     height: 100%;
-    padding: 5% 5% 5% 5%;
+    padding: 0 5% 5% 5%;
 
     /* CONTENIDO */    
     display: flex;
@@ -225,14 +201,13 @@ nav a:hover{
     background: transparent;
     overflow-x: hidden;
     
-    color: #fff; 
+    color: #fff;
 }
 .sobreMi_elemento{
     background: transparent;
     padding: 0 3% 0 3%;
 }
 .sobreMi_elemento:first-child{
-    display: flex;
     width: 25%;
     justify-content: center;  /* ALINEACION HORIZONTAL*/
 }
@@ -254,67 +229,14 @@ nav a:hover{
     width: 100%;
 }
 
+
+
 /*----------------------------------------------------------------------------------------------------*/
 /* PORTAFOLIO */
-.Contenedor_Cuadros{
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;      /* ALINEACION VERTICAL*/
-    justify-content: center;  /* ALINEACION HORIZONTAL*/
-
-    background: #fff;
-}
-.Cuadro{
-    width: 23%;
-    height: 23%;
-    margin: .5%;
-    border-radius: 2rem 2rem 2rem 2rem;
-
-    background: #000;
-}
-.Cuadro:hover{
-    opacity: 60%;
-}
-.Cuadro:first-child{
-    background: #c50909;
-}
-.Cuadro:nth-child(2){
-    background: #1310d3;
-}
-.Cuadro:nth-child(3){
-    background: #f1f518;
-}
-.Cuadro:nth-child(4){
-    background: #009e22;
-}
-.Cuadro img{
-    width: 100%;
-    height: 100%;
-}
-
-/*----------------------------------------------------------------------------------------------------*/
-/* CONJUNTO DE HABILIDADES */
-.Seccion_ConjuntoDeHabilidades{
+.Contenedor_Cuadricula{    
     /* TAMAÑO */
-    width: 100vw;
-    height: 100vh;
-    padding: 6vh 0 0 0;
-
-    /* CONTENIDO */
-    display: flex;
-    align-items: center;      /* ALINEACION VERTICAL*/
-    justify-content: center;  /* ALINEACION HORIZONTAL*/
-
-    /* ASPECTO */
-    background: transparent;
-}
-.ConjuntoDeHabilidades_Contenedor{    
-    /* TAMAÑO */
-    width:100%;
-    height: 100%;
+    width: 100%;  /*90%*/
+    height: 100%; /*90%*/
 
     /* CONTENIDO */    
     display: flex;
@@ -325,35 +247,88 @@ nav a:hover{
     /* ASPECTO */ 
     overflow: hidden;
     background: transparent;
-    background: #009e22;
+    background: #878787;
 }
-.ConjuntoDeHabilidades_Cuadricula{    
+.Cuadricula_portafolio{    
     width: 100%;
-    height: 100%;
+    height: 80%;
 
     display: flex;
     flex-wrap: wrap;
     align-items: center;      /* ALINEACION VERTICAL*/
     justify-content: center;  /* ALINEACION HORIZONTAL*/
 
-    background: #fff;
+    background: #C6C6C6;
 }
-.conjuntoDeHabilidades_elemento{
-    width: 23%;
-    height: 11rem;
+.elemento_portafolio{
+    width: 20%;
+    height: 20%;
     margin: .5%;
-    border-radius: 2rem 2rem 2rem 2rem;
+    border-radius: 2rem;
+    
+    background: #EDEDED;
 
-    background: #000;
+    display: flex;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
 }
-.conjuntoDeHabilidades_elemento img{
+
+.Cuadricula_habilidades{    
     width: 100%;
-    height: 100%;
+    height: 90%;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
+
+    background: #C6C6C6;
 }
-.ConjuntoDeHabilidades_Contenedor span{
+.elemento_habilidades{
+    width: 18%;
+    height: 20%;
+    margin: .5%;
+    border-radius: 2rem;
+    
+    background: #EDEDED;
+
+    display: flex;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
+}
+.elemento_portafolio:hover{
+    opacity: 60%;
+}
+.elemento_portafolio:first-child{
+    background: #EDEDED;
+}
+.elemento_portafolio:nth-child(2){
+    background: #EDEDED;
+}
+.elemento_portafolio img{
+    width: 90%;
+    height: 90%;
+}
+.boton{
+    width: 20%;
+    height: 10%;
+    background: #fff;
+    border-radius: 2rem;
+}
+.boton img{
+    width: 90%;
+    height: 90%;
+}
+.elemento_habilidades img{
+    width: 90%;
+    height: 90%;
+}
+.Contenedor_Cuadricula span{
+    height: 10%;
     color: #fff;
     font-family: Helvetica-Medium;
     font-size: 3vw;
+    background: #3836f2;
 }
 
 
@@ -496,7 +471,7 @@ nav a:hover{
     position: absolute;
     right: 0;
     width: 0;
-    height: 90%;
+    height: 100%;
     background: #000;
     border-left: 2px solid #fff;
 
@@ -514,6 +489,69 @@ nav a:hover{
 }
 
 
+/*----------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------*/
+/* E S T I L O S    PORTAFOLIO.HTML */
+.Seccion_Diseño{
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    padding: 0 0 0 0;
 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+
+    background: #fff;
+}
+.Contenedor_Diseño{
+    width: 100%;
+    height: 100%;
+    padding: 0 0 0 0;
+    border: 0 0 0 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
+    
+}
+.Cuadricula_Diseño{
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
+
+    background: #3836f2;
+}
+.Elemento_Diseño{
+    width: 23%;
+    margin:  1vw 1vw 0 1vw;
+    border-radius: 2rem;
+    
+    background: #EDEDED;
+
+    display: flex;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
+}
+.Elemento_Diseño img{
+    width: 90%;
+    height: 90%;
+}
+.Contenedor_Diseño span{
+    height: 7%;
+    color: #fff;
+    font-family: Helvetica-Medium;
+    font-size: 3vw;
+    background: #3836f2;
+}
 
 
