@@ -164,7 +164,7 @@ nav a:hover{
      align-items: flex-start;      /* ALINEACION VERTICAL*/
      justify-content: center;      /* ALINEACION HORIZONTAL*/
 
-    line-height: 0;    
+    line-height: 1;    
     color: #fff;
 
     /* ASPECTO */ 
