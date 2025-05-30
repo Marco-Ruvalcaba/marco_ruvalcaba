@@ -23,15 +23,20 @@
 html{
     scroll-behavior: smooth; /*SMOOTH SCROLL*/
 }
+/*
 ::-webkit-scrollbar {
     display: none;
 }  
+*/
 body{
     background: #000;
     max-width: 100vw;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+
+    background-color: #ffdd90;
+    background-image: url("./images/Ventana1.svg");
 }
 
 /*----------------------------------------------------------------------------------------------------*/
@@ -46,8 +51,8 @@ body{
 .barra_social{        /* BARRA SOCIAL */
     position: fixed;
     right: 0;
-    top: 40%;
-    font-size: 1.5rem;
+    top: 35%;
+    font-size: 2rem;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -147,411 +152,45 @@ nav a:hover{
     justify-content: center;  /* ALINEACION HORIZONTAL*/
 
     /* ASPECTO */
-    background: transparent;
-    overflow: hidden;
-}
-
-/*----------------------------------------------------------------------------------------------------*/
-.presentacion_contenedor{        /* PRESENTACION */
-    /* TAMAÑO */
-    width: 100%;
-    height: 100%;
-    padding: 0 0 0 10%;
-
-     /* CONTENIDO */    
-     display: flex;
-     flex-direction: column;
-     align-items: flex-start;      /* ALINEACION VERTICAL*/
-     justify-content: center;      /* ALINEACION HORIZONTAL*/
-
-    line-height: 0;    
-    color: #fff;
-
-    /* ASPECTO */ 
-    background: #000;
-    overflow: hidden;
-}
-.presentacion_contenedor h1{
-    font-family: Nasa-Type;
-    font-size: 10vw;
-}
-.presentacion_contenedor h2{
-    font-family: Helvetica-Medium;
-    font-size: 6vw;
-}
-.presentacion_contenedor p{
-    font-family: Helvetica-Light;
-    font-size: 5vw;
-}
-
-
-/*----------------------------------------------------------------------------------------------------*/
-.sobreMi_contenedor{        /* SOBRE MI */    
-    /* TAMAÑO */
-    width: 100%;
-    height: 100%;
-    padding: 0 5% 5% 5%;
-
-    /* CONTENIDO */    
-    display: flex;
-    align-items: center;      /* ALINEACION VERTICAL*/
-    justify-content: center;  /* ALINEACION HORIZONTAL*/
-
-    /* ASPECTO */ 
-    background: transparent;
-    overflow-x: hidden;
-    
-    color: #fff;
-}
-.sobreMi_elemento{
-    background: transparent;
-    padding: 0 3% 0 3%;
-}
-.sobreMi_elemento:first-child{
-    width: 25%;
-    justify-content: center;  /* ALINEACION HORIZONTAL*/
-}
-.sobreMi_elemento:nth-child(2){
-    width: 55%;
-}
-.sobreMi_elemento h1{
-    font-family: Futura-Demi_Bold;
-    font-size: 6vw;
-    margin: 0 0 0 0;
-}
-.sobreMi_elemento p{
-    font-family: Futura-Light;
-    font-size: 1.5vw;
-    text-align: justify;
-    margin: 0 0 0 0;
-}
-.sobreMi_elemento img{
-    width: 100%;
-}
-
-
-
-/*----------------------------------------------------------------------------------------------------*/
-/* PORTAFOLIO */
-.Contenedor_Cuadricula{    
-    /* TAMAÑO */
-    width: 100%;  /*90%*/
-    height: 100%; /*90%*/
-
-    /* CONTENIDO */    
-    display: flex;
-    flex-direction: column;
-    align-items: center;      /* ALINEACION VERTICAL*/
-    justify-content: center;  /* ALINEACION HORIZONTAL*/
-
-    /* ASPECTO */ 
-    overflow: hidden;
-    background: transparent;
-    background: #878787;
-}
-.Cuadricula_portafolio{    
-    width: 100%;
-    height: 80%;
-
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;      /* ALINEACION VERTICAL*/
-    justify-content: center;  /* ALINEACION HORIZONTAL*/
-
-    background: #C6C6C6;
-}
-.elemento_portafolio{
-    width: 20%;
-    height: 20%;
-    margin: .5%;
-    border-radius: 2rem;
-    
-    background: #EDEDED;
-
-    display: flex;
-    align-items: center;      /* ALINEACION VERTICAL*/
-    justify-content: center;  /* ALINEACION HORIZONTAL*/
-}
-
-.Cuadricula_habilidades{    
-    width: 100%;
-    height: 90%;
-
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;      /* ALINEACION VERTICAL*/
-    justify-content: center;  /* ALINEACION HORIZONTAL*/
-
-    background: #C6C6C6;
-}
-.elemento_habilidades{
-    width: 18%;
-    height: 20%;
-    margin: .5%;
-    border-radius: 2rem;
-    
-    background: #EDEDED;
-
-    display: flex;
-    align-items: center;      /* ALINEACION VERTICAL*/
-    justify-content: center;  /* ALINEACION HORIZONTAL*/
-}
-.elemento_portafolio:hover{
-    opacity: 60%;
-}
-.elemento_portafolio:first-child{
-    background: #EDEDED;
-}
-.elemento_portafolio:nth-child(2){
-    background: #EDEDED;
-}
-.elemento_portafolio img{
-    width: 90%;
-    height: 90%;
-}
-.boton{
-    width: 20%;
-    height: 10%;
-    background: #fff;
-    border-radius: 2rem;
-}
-.boton img{
-    width: 90%;
-    height: 90%;
-}
-.elemento_habilidades img{
-    width: 90%;
-    height: 90%;
-}
-.Contenedor_Cuadricula span{
-    height: 10%;
-    color: #fff;
-    font-family: Helvetica-Medium;
-    font-size: 3vw;
     background: #3836f2;
-}
-
-
-
-
-/*----------------------------------------------------------------------------------------------------*/
-/* CONTACTO */
-.contacto_contenedor{
-    background: turquoise;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    line-height: .5;
-    width: 85%;
-    height: 80%;
+    background: transparent;
+    
     overflow: hidden;
 }
-.contacto_elemento{
-    text-align: justify;
-    padding: 5% 5% 5% 5%;
-    background: tomato;
-    width: 100%;
-}
-.contacto_elemento img{
-    height: 5%;
-    object-fit: contain;
-}
 
-
-
-
-.form{
-    background-color: #fff;
-    margin: auto;
-    width: 90%;
-    max-width: 400px;
-    padding: 2em 3em;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px -5px rgb(0 0 0  / 30%);
-    text-align: center;
-}
-.form__title{
-    font-size: 2rem;
-    margin-bottom: .5em;
-}
-.form__paragraph{
-    font-weight: 300;
-}
-.form__link{
-    font-weight: 400;
-    color: #000;
-}
-.form__container{
-    margin-top: 1em;
-    display: grid;
-    gap: 1em;
-}
-.form__group{
-    position: relative;
-    --color: #5757577e;
-}
-.form__input{
-    width: 100%;
-    background: none;
-    color: #706c6c;
-    font-size: 1rem;
-    padding: .6em .3em;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid var(--color);
-    font-family: cursive;
-}
-.form__input:focus + .form__label,
-.form__input:not(:placeholder-shown) + .form__label{
-    transform: translateY(-12px) scale(.7);
-    transform-origin: left top;
-    color: #3836f2;
-}
-
-.form__label{
-    color: var(--color);
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    left: 5px;
-    transform: translateY(10px);
-    transition: transform .5s, color .3s;
-
-}
-.form__submit{
-    background: #3866f2;
-    color: #fff;
-    font-family: monospace;
-    font-weight: 300;
-    font-size: 1rem;
-    padding: .8rem 0;
-    border: none;
-    border-radius: .5rem;
-}
-.form__line{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: #3866f2;
-    transform: scale(0);
-    transform: left bottom;
-    transition: transform .4s;
-}
-
-.form__input:focus ~ .form__line,
-.form__input:not(:placeholder-shown) ~ .form__line{
-    transform: scale(1);
-    
-}
-
-
-/*----------------------------------------------------------------------------------------------------*/
-/* CODIGO NECESARIO PARA EL EFECTO DE MAQUINA DE ESCRIBIR */
-.efecto_escribir{
-    background: transparent;
-    display: table;
-
-    margin: 0 0 0 0;
-
-    line-height: 1;
-}
-.efecto_escribir h1 {
-    font-family: monospace;
-    float: left;
-    color: #fff;
-    position: relative;
-    font-size: 8vw;
-
-    margin: 0 0 0 0;
-}
-.efecto_escribir span{
-    position: absolute;
-    right: 0;
-    width: 0;
-    height: 100%;
-    background: #000;
-    border-left: 2px solid #fff;
-
-    animation: typing_effect 4s steps(13) infinite alternate, blink_effect .5s infinite step-end;
-}
-@keyframes typing_effect {
-    from{
-        width: 100%;
-    } to {
-        width: 0;
-    }
-}
-@keyframes blink_effect {
-    50% { border-color: transparent; }
-}
-
-
-/*----------------------------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------------------------*/
-/* E S T I L O S    PORTAFOLIO.HTML */
-.Seccion_Diseño{
-    width: 100vw;
-    height: 100vh;
-    min-height: 100vh;
-    padding: 0 0 0 0;
-
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-
-
-    background: #fff;
-}
-.Contenedor_Diseño{
-    width: 100%;
-    height: 100%;
-    padding: 0 0 0 0;
-    border: 0 0 0 0;
-
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;      /* ALINEACION VERTICAL*/
-    justify-content: center;  /* ALINEACION HORIZONTAL*/
-    
-}
-.Cuadricula_Diseño{
-    width: 100%;
-    height: auto;
-
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;      /* ALINEACION VERTICAL*/
-    justify-content: center;  /* ALINEACION HORIZONTAL*/
-
-    background: #3836f2;
-}
-.Elemento_Diseño{
-    width: 23%;
-    margin:  1vw 1vw 0 1vw;
-    border-radius: 2rem;
-    
-    background: #EDEDED;
-
-    display: flex;
-    align-items: center;      /* ALINEACION VERTICAL*/
-    justify-content: center;  /* ALINEACION HORIZONTAL*/
-}
-.Elemento_Diseño img{
+.Contenedor_Generico{
     width: 90%;
     height: 90%;
-}
-.Contenedor_Diseño span{
-    height: 7%;
-    color: #fff;
-    font-family: Helvetica-Medium;
-    font-size: 3vw;
-    background: #3836f2;
+
+    background: transparent;
+
+    display: flex;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
 }
 
+.Contenedor_Generico img{
+    width: 40%;
+    background: transparent;
+}
 
+.Logo{
+    position: fixed;
+    z-index: 100;
+    left: 1vw;
+  	top: 6vh;
+
+    display: flex;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
+    
+    padding: 0%;
+    margin: 0%;
+    width: 7%;
+    background: transparent;
+}
+
+.Logo img{
+    width: 100%;
+    background: transparent;
+}
