@@ -152,6 +152,190 @@ nav a:hover{
     justify-content: center;  /* ALINEACION HORIZONTAL*/
 
     /* ASPECTO */
+<<<<<<< HEAD
+=======
+    background: transparent;
+    overflow: hidden;
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+.presentacion_contenedor{        /* PRESENTACION */
+    /* TAMAÑO */
+    width: 100%;
+    height: 100%;
+    padding: 0 0 0 10%;
+
+     /* CONTENIDO */    
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;      /* ALINEACION VERTICAL*/
+     justify-content: center;      /* ALINEACION HORIZONTAL*/
+
+    line-height: 1;    
+    color: #fff;
+
+    /* ASPECTO */ 
+    background: #000;
+    overflow: hidden;
+}
+.presentacion_contenedor h1{
+    font-family: Nasa-Type;
+    font-size: 10vw;
+}
+.presentacion_contenedor h2{
+    font-family: Helvetica-Medium;
+    font-size: 6vw;
+}
+.presentacion_contenedor p{
+    font-family: Helvetica-Light;
+    font-size: 5vw;
+}
+
+
+/*----------------------------------------------------------------------------------------------------*/
+.sobreMi_contenedor{        /* SOBRE MI */    
+    /* TAMAÑO */
+    width: 100%;
+    height: 100%;
+    padding: 0 5% 5% 5%;
+
+    /* CONTENIDO */    
+    display: flex;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
+
+    /* ASPECTO */ 
+    background: transparent;
+    overflow-x: hidden;
+    
+    color: #fff;
+}
+.sobreMi_elemento{
+    background: transparent;
+    padding: 0 3% 0 3%;
+}
+.sobreMi_elemento:first-child{
+    width: 25%;
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
+}
+.sobreMi_elemento:nth-child(2){
+    width: 55%;
+}
+.sobreMi_elemento h1{
+    font-family: Futura-Demi_Bold;
+    font-size: 6vw;
+    margin: 0 0 0 0;
+}
+.sobreMi_elemento p{
+    font-family: Futura-Light;
+    font-size: 1.5vw;
+    text-align: justify;
+    margin: 0 0 0 0;
+}
+.sobreMi_elemento img{
+    width: 100%;
+}
+
+
+
+/*----------------------------------------------------------------------------------------------------*/
+/* PORTAFOLIO */
+.Contenedor_Cuadricula{    
+    /* TAMAÑO */
+    width: 100%;  /*90%*/
+    height: 100%; /*90%*/
+
+    /* CONTENIDO */    
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
+
+    /* ASPECTO */ 
+    overflow: hidden;
+    background: transparent;
+    background: #878787;
+}
+.Cuadricula_portafolio{    
+    width: 100%;
+    height: 80%;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
+
+    background: #C6C6C6;
+}
+.elemento_portafolio{
+    width: 20%;
+    height: 20%;
+    margin: .5%;
+    border-radius: 2rem;
+    
+    background: #EDEDED;
+
+    display: flex;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
+}
+
+.Cuadricula_habilidades{    
+    width: 100%;
+    height: 90%;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
+
+    background: #C6C6C6;
+}
+.elemento_habilidades{
+    width: 18%;
+    height: 20%;
+    margin: .5%;
+    border-radius: 2rem;
+    
+    background: #EDEDED;
+
+    display: flex;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
+}
+.elemento_portafolio:hover{
+    opacity: 60%;
+}
+.elemento_portafolio:first-child{
+    background: #EDEDED;
+}
+.elemento_portafolio:nth-child(2){
+    background: #EDEDED;
+}
+.elemento_portafolio img{
+    width: 90%;
+    height: 90%;
+}
+.boton{
+    width: 20%;
+    height: 10%;
+    background: #fff;
+    border-radius: 2rem;
+}
+.boton img{
+    width: 90%;
+    height: 90%;
+}
+.elemento_habilidades img{
+    width: 90%;
+    height: 90%;
+}
+.Contenedor_Cuadricula span{
+    height: 10%;
+    color: #fff;
+    font-family: Helvetica-Medium;
+    font-size: 3vw;
+>>>>>>> f3dd88454703559d46613ba8080c0bb4ce7437c3
     background: #3836f2;
     background: transparent;
     
