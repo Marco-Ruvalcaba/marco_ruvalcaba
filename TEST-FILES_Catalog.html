@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toy Store Catalog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .catalog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .catalog-header {
+            text-align: center;
+            margin-bottom: 40px;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 15px;
+        }
+
+        .catalog-header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .catalog-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .toys-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .toy-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 3px solid transparent;
+        }
+
+        .toy-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .toy-card.action-figures {
+            border-color: #e74c3c;
+        }
+
+        .toy-card.dolls {
+            border-color: #e91e63;
+        }
+
+        .toy-card.educational {
+            border-color: #3498db;
+        }
+
+        .toy-card.outdoor {
+            border-color: #27ae60;
+        }
+
+        .toy-card.building {
+            border-color: #f39c12;
+        }
+
+        .toy-card.vehicles {
+            border-color: #9b59b6;
+        }
+
+        .toy-image {
+            width: 100%;
+            height: 200px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #bdc3c7;
+        }
+
+        .toy-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+
+        .toy-description {
+            color: #7f8c8d;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .toy-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .toy-price {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        .toy-age {
+            background-color: #3498db;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        .add-to-cart-btn {
+            width: 100%;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #219a52;
+        }
+
+        .filter-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .filter-btn {
+            background-color: #34495e;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background-color: #2c3e50;
+        }
+
+        @media (max-width: 768px) {
+            .catalog-header h1 {
+                font-size: 2rem;
+            }
+            
+            .toys-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .toy-details {
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="catalog-container">
+        <header class="catalog-header">
+            <h1>🧸 Wonder Toys Catalog</h1>
+            <p>Discover Amazing Toys for Every Age and Interest!</p>
+        </header>
+
+        <div class="filter-section">
+            <button class="filter-btn active" onclick="filterToys('all')">All Toys</button>
+            <button class="filter-btn" onclick="filterToys('action-figures')">Action Figures</button>
+            <button class="filter-btn" onclick="filterToys('dolls')">Dolls</button>
+            <button class="filter-btn" onclick="filterToys('educational')">Educational</button>
+            <button class="filter-btn" onclick="filterToys('outdoor')">Outdoor</button>
+            <button class="filter-btn" onclick="filterToys('building')">Building</button>
+            <button class="filter-btn" onclick="filterToys('vehicles')">Vehicles</button>
+        </div>
+
+        <!-- Action Figures Section -->
+        <section class="category-section" data-category="action-figures">
+            <h2 class="category-title">🦸 Action Figures</h2>
+            <div class="toys-grid">
+                <div class="toy-card action-figures">
+                    <div class="toy-image">🦸‍♂️</div>
+                    <h3 class="toy-name">Super Hero Captain</h3>
+                    <p class="toy-description">Poseable action figure with 15 points of articulation and accessories.</p>
+                    <div class="toy-details">
+                        <span class="toy-price">$24.99</span>
+                        <span class="toy-age">Ages 4+</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                
+                <div class="toy-card action-figures">
+                    <div class="toy-image">🤖</div>
+                    <h3 class="toy-name">Robot Warrior</h3>
+                    <p class="toy-description">Transforming robot with lights and sounds. Converts from robot to vehicle.</p>
+                    <div class="toy-details">
+                        <span class="toy-price">$32.99</span>
+                        <span class="toy-age">Ages 6+</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                
+                <div class="toy-card action-figures">
+                    <div class="toy-image">🦖</div>
+                    <h3 class="toy-name">Dino Explorer</h3>
+                    <p class="toy-description">Realistic dinosaur figure with moveable jaw and authentic sounds.</p>
+                    <div class="toy-details">
+                        <span class="toy-price">$19.99</span>
+                        <span class="toy-age">Ages 3+</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dolls Section -->
+        <section class="category-section" data-category="dolls">
+            <h2 class="category-title">👸 Dolls & Figures</h2>
+            <div class="toys-grid">
+                <div class="toy-card dolls">
+                    <div class="toy-image">👸</div>
+                    <h3 class="toy-name">Princess Bella</h3>
+                    <p class="toy-description">Beautiful princess doll with changeable outfits and accessories.</p>
+                    <div class="toy-details">
+                        <span class="toy-price">$29.99</span>
+                        <span class="toy-age">Ages 3+</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                
+                <div class="toy-card dolls">
+                    <div class="toy-image">🧚‍♀️</div>
+                    <h3 class="toy-name">Fairy Garden Set</h3>
+                    <p class="toy-description">Magical fairy doll with garden playset and miniature accessories.</p>
+                    <div class="toy-details">
+                        <span class="toy-price">$34.99</span>
+                        <span class="toy-age">Ages 4+</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                
+                <div class="toy-card dolls">
+                    <div class="toy-image">👶</div>
+                    <h3 class="toy-name">Baby Care Doll</h3>
+                    <p class="toy-description">Interactive baby doll that cries, laughs, and needs care.</p>
+                    <div class="toy-details">
+                        <span class="toy-price">$39.99</span>
+                        <span class="toy-age">Ages 5+</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Educational Toys Section -->
+        <section class="category-section" data-category="educational">
+            <h2 class="category-title">🎓 Educational Toys</h2>
+            <div class="toys-grid">
+                <div class="toy-card educational">
+                    <div class="toy-image">🧩</div>
+                    <h3 class="toy-name">Learning Puzzle Set</h3>
+                    <p class="toy-description">Colorful puzzles that teach shapes, colors, and problem-solving skills.</p>
+                    <div class="toy-details">
+                        <span class="toy-price">$16.99</span>
+                        <span class="toy-age">Ages 2+</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                
+                <div class="toy-card educational">
+                    <div class="toy-image">🔬</div>
+                    <h3 class="toy-name">Science Lab Kit</h3>
+                    <p class="toy-description">Complete science experiment kit with safe, fun activities.</p>
+                    <div class="toy-details">
+                        <span class="toy-price">$42.99</span>
+                        <span class="toy-age">Ages 8+</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                
+                <div class="toy-card educational">
+                    <div class="toy-image">📚</div>
+                    <h3 class="toy-name">Interactive Learning Tablet</h3>
+                    <p class="toy-description">Educational tablet with games, stories, and learning activities.</p>
+                    <div class="toy-details">
+                        <span class="toy-price">$49.99</span>
+                        <span class="toy-age">Ages 3+</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Outdoor Toys Section -->
+        <section class="category-section" data-category="outdoor">
+            <h2 class="category-title">🌞 Outdoor Fun</h2>
+            <div class="toys-grid">
+                <div class="toy-card outdoor">
+                    <div class="toy-image">⚽</div>
+                    <h3 class="toy-name">Sports Ball Set</h3>
+                    <p class="toy-description">Complete set with soccer ball, basketball, and football.</p>
+                    <div class="toy-details">
+                        <span class="toy-price">$27.99</span>
+                        <span class="toy-age">Ages 5+</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                
+                <div class="toy-card outdoor">
+                    <div class="toy-image">🪁</div>
+                    <h3 class="toy-name">Rainbow Kite</h3>
+                    <p class="toy-description">Colorful kite that's easy to fly with included string and handle.</p>
+                    <div class="toy-details">
+                        <span class="toy-price">$14.99</span>
+                        <span class="toy-age">Ages 6+</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                
+                <div class="toy-card outdoor">
+                    <div class="toy-image">💧</div>
+                    <h3 class="toy-name">Water Blaster Set</h3>
+                    <p class="toy-description">Super soaker water guns perfect for summer fun and pool parties.</p>
+                    <div class="toy-details">
+                        <span class="toy-price">$22.99</span>
+                        <span class="toy-age">Ages 4+</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Building Toys Section -->
+        <section class="category-section" data-category="building">
+            <h2 class="category-title">🏗️ Building & Construction</h2>
+            <div class="toys-grid">
+                <div class="toy-card building">
+                    <div class="toy-image">🧱</div>
+                    <h3 class="toy-name">Mega Building Blocks</h3>
+                    <p class="toy-description">500-piece building block set with instruction booklet for various models.</p>
+                    <div class="toy-details">
+                        <span class="toy-price">$54.99</span>
+                        <span class="toy-age">Ages 6+</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                
+                <div class="toy-card building">
+                    <div class="toy-image">🏰</div>
+                    <h3 class="toy-name">Castle Construction Kit</h3>
+                    <p class="toy-description">Build your own medieval castle with knights and accessories.</p>
+                    <div class="toy-details">
+                        <span class="toy-price">$67.99</span>
+                        <span class="toy-age">Ages 8+</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                
+                <div class="toy-card building">
+                    <div class="toy-image">🔧</div>
+                    <h3 class="toy-name">Tool Workshop Set</h3>
+                    <p class="toy-description">Realistic toy tools with workbench for creative building projects.</p>
+                    <div class="toy-details">
+                        <span class="toy-price">$38.99</span>
+                        <span class="toy-age">Ages 4+</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vehicles Section -->
+        <section class="category-section" data-category="vehicles">
+            <h2 class="category-title">🚗 Vehicles & Transportation</h2>
+            <div class="toys-grid">
+                <div class="toy-card vehicles">
+                    <div class="toy-image">🏎️</div>
+                    <h3 class="toy-name">Racing Car Collection</h3>
+                    <p class="toy-description">Set of 6 die-cast racing cars with realistic details and moving parts.</p>
+                    <div class="toy-details">
+                        <span class="toy-price">$31.99</span>
+                        <span class="toy-age">Ages 3+</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                
+                <div class="toy-card vehicles">
+                    <div class="toy-image">🚁</div>
+                    <h3 class="toy-name">Remote Control Helicopter</h3>
+                    <p class="toy-description">Easy-to-fly RC helicopter with LED lights and stable flight control.</p>
+                    <div class="toy-details">
+                        <span class="toy-price">$45.99</span>
+                        <span class="toy-age">Ages 8+</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                
+                <div class="toy-card vehicles">
+                    <div class="toy-image">🚂</div>
+                    <h3 class="toy-name">Electric Train Set</h3>
+                    <p class="toy-description">Complete train set with tracks, station, and battery-powered locomotive.</p>
+                    <div class="toy-details">
+                        <span class="toy-price">$78.99</span>
+                        <span class="toy-age">Ages 6+</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function filterToys(category) {
+            const sections = document.querySelectorAll('.category-section');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            // Remove active class from all buttons
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+            
+            // Show/hide sections based on category
+            sections.forEach(section => {
+                if (category === 'all' || section.dataset.category === category) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+
+        // Add to cart functionality
+        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const toyName = this.parentElement.querySelector('.toy-name').textContent;
+                const toyPrice = this.parentElement.querySelector('.toy-price').textContent;
+                
+                // Simple feedback
+                this.textContent = 'Added!';
+                this.style.backgroundColor = '#27ae60';
+                
+                setTimeout(() => {
+                    this.textContent = 'Add to Cart';
+                    this.style.backgroundColor = '#27ae60';
+                }, 2000);
+                
+                // Here you would typically add the item to a shopping cart
+                console.log(`Added ${toyName} (${toyPrice}) to cart`);
+            });
+        });
+    </script>
+</body>
+</html>

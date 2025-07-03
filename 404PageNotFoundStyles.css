@@ -1,0 +1,57 @@
+@import "Styles.css";
+body{
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.particulas_JS{       
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: -1;
+    background: rgb(0, 0, 0);
+}
+div{
+    font-size: larger;
+    color:rgb(255, 255, 255);
+}
+.Contenedor404{
+    width: 50%;
+    height: 100%;
+
+    display: inline-grid;
+    align-items: center;      /* ALINEACION VERTICAL*/
+    justify-content: center;  /* ALINEACION HORIZONTAL*/
+
+    background: transparent;
+}
+
+.Contenedor404_Left{
+    background-image: url("images/Astronauta.png");
+    background-size: cover; 
+    background-position: center center;
+}
+.Contenedor404_Right{
+    line-height: 4em;
+    text-align: center;
+}
+.Text{
+    color:rgb(255, 255, 255);
+}
+.Text1{
+    font-family: Futura-Demi_Bold;
+    font-size: 400px;
+}
+.Text2{
+    font-family: Futura-Demi_Bold;
+    font-size: 125px;
+}
+.Text3{
+    font-family: Futura-Demi_Bold;
+    font-size: 70px;
+}
+.Text4{
+    font-family: Futura-Light;
+    font-size: 35px;
+}
