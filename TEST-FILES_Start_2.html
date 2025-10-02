@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Lost in Space</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+            color: #ffffff;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .star {
+            position: absolute;
+            background: #ffffff;
+            border-radius: 50%;
+            animation: twinkle 2s infinite alternate;
+        }
+
+        .star:nth-child(1) { top: 20%; left: 20%; width: 2px; height: 2px; animation-delay: 0s; }
+        .star:nth-child(2) { top: 30%; left: 80%; width: 1px; height: 1px; animation-delay: 0.5s; }
+        .star:nth-child(3) { top: 60%; left: 10%; width: 3px; height: 3px; animation-delay: 1s; }
+        .star:nth-child(4) { top: 80%; left: 70%; width: 2px; height: 2px; animation-delay: 1.5s; }
+        .star:nth-child(5) { top: 10%; left: 60%; width: 1px; height: 1px; animation-delay: 2s; }
+        .star:nth-child(6) { top: 70%; left: 30%; width: 2px; height: 2px; animation-delay: 0.3s; }
+        .star:nth-child(7) { top: 40%; left: 90%; width: 1px; height: 1px; animation-delay: 0.8s; }
+        .star:nth-child(8) { top: 90%; left: 20%; width: 3px; height: 3px; animation-delay: 1.2s; }
+
+        @keyframes twinkle {
+            0% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .error-code {
+            font-size: clamp(8rem, 15vw, 12rem);
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 3s ease-in-out infinite;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .astronaut {
+            width: 200px;
+            height: 200px;
+            margin: 2rem 0;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 1rem;
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+
+        .subtitle {
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            margin-bottom: 2rem;
+            color: #b8b8b8;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .home-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            border: 2px solid transparent;
+        }
+
+        .home-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .planets {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .planet {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.7;
+        }
+
+        .planet-1 {
+            width: 60px;
+            height: 60px;
+            background: radial-gradient(circle at 30% 30%, #ff6b6b, #d63031);
+            top: 15%;
+            right: 10%;
+            animation: orbit 20s linear infinite;
+        }
+
+        .planet-2 {
+            width: 40px;
+            height: 40px;
+            background: radial-gradient(circle at 30% 30%, #4ecdc4, #00b894);
+            bottom: 20%;
+            left: 15%;
+            animation: orbit 15s linear infinite reverse;
+        }
+
+        @keyframes orbit {
+            0% { transform: rotate(0deg) translateX(50px) rotate(0deg); }
+            100% { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+        }
+
+        .shooting-star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #ffffff;
+            animation: shoot 3s linear infinite;
+        }
+
+        .shooting-star:nth-child(1) {
+            top: 25%;
+            left: -10%;
+            animation-delay: 0s;
+        }
+
+        .shooting-star:nth-child(2) {
+            top: 60%;
+            left: -10%;
+            animation-delay: 2s;
+        }
+
+        @keyframes shoot {
+            0% {
+                transform: translateX(0) translateY(0);
+                opacity: 1;
+            }
+            70% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(300px) translateY(-100px);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .astronaut {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .planet-1, .planet-2 {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
+
+    <div class="planets">
+        <div class="planet planet-1"></div>
+        <div class="planet planet-2"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+    </div>
+
+    <main class="container">
+        <div class="error-code" aria-label="Error 404">404</div>
+        
+        <div class="astronaut">
+            <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <!-- Astronaut helmet -->
+                <circle cx="100" cy="80" r="45" fill="#E8E8E8" stroke="#CCCCCC" stroke-width="2"/>
+                <circle cx="100" cy="80" r="35" fill="rgba(255,255,255,0.1)"/>
+                
+                <!-- Astronaut face -->
+                <circle cx="90" cy="75" r="3" fill="#333"/>
+                <circle cx="110" cy="75" r="3" fill="#333"/>
+                <path d="M95 85 Q100 90 105 85" stroke="#333" stroke-width="2" fill="none"/>
+                
+                <!-- Body -->
+                <ellipse cx="100" cy="140" rx="35" ry="45" fill="#F0F0F0"/>
+                <rect x="80" y="120" width="40" height="40" rx="5" fill="#4A90E2"/>
+                
+                <!-- Arms -->
+                <ellipse cx="65" cy="130" rx="12" ry="25" fill="#F0F0F0"/>
+                <ellipse cx="135" cy="130" rx="12" ry="25" fill="#F0F0F0"/>
+                
+                <!-- Legs -->
+                <ellipse cx="85" cy="180" rx="10" ry="20" fill="#F0F0F0"/>
+                <ellipse cx="115" cy="180" rx="10" ry="20" fill="#F0F0F0"/>
+                
+                <!-- Boots -->
+                <ellipse cx="85" cy="195" rx="12" ry="8" fill="#333"/>
+                <ellipse cx="115" cy="195" rx="12" ry="8" fill="#333"/>
+            </svg>
+        </div>
+
+        <h1 class="title">Houston, We Have a Problem!</h1>
+        <p class="subtitle">
+            The page you're looking for has drifted into deep space. 
+            Our astronauts are working hard to bring it back to Earth.
+        </p>
+        
+        <a href="index.html" class="home-button" role="button">
+            🚀 Return to Earth
+        </a>
+    </main>
+</body>
+</html>
