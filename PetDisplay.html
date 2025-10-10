@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta de Identificacion de Mascotas</title>
+    <link rel="stylesheet" href="PetDisplay.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pet Directory</h1>
+        <div id="pet-list"></div>
+    </div>
+
+    <script>
+        // Fetch and display pet data
+        fetch('pets.json')
+            .then(response => response.json())
+            .then(data => {
+                const petList = document.getElementById('pet-list');
+                
+                data.pets.forEach(pet => {
+                    const petCard = document.createElement('div');
+                    petCard.className = 'pet-card';
+                    
+                    petCard.innerHTML = `
+                        <div class="image-container">
+                            <img src="${pet.image}" alt="${pet.petName}">
+                        </div>
+                        <div class="info-container">
+                            <div class="info-field">
+                                <span class="label">Pet Name:</span>
+                                <span class="value">${pet.petName}</span>
+                            </div>
+                            <div class="info-field">
+                                <span class="label">Age:</span>
+                                <span class="value">${pet.age}</span>
+                            </div>
+                            <div class="info-field">
+                                <span class="label">Phone Number:</span>
+                                <span class="value">${pet.phoneNumber}</span>
+                            </div>
+                            <div class="info-field">
+                                <span class="label">Owner Name:</span>
+                                <span class="value">${pet.ownerName}</span>
+                            </div>
+                        </div>
+                    `;
+                    
+                    petList.appendChild(petCard);
+                });
+            })
+            .catch(error => console.error('Error loading pet data:', error));
+    </script>
+</body>
+</html>

@@ -12,13 +12,13 @@
         }
 
         body {
-            max-height: 95vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            padding: 20px;
+            height: 100vh;
+            width: 100vw;
             overflow: hidden;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
         }
 
         .image-container {
@@ -31,7 +31,7 @@
 
         .centered-image {
             max-width: 100%;
-            max-height: 90vh;
+            max-height: 100vh;
             height: auto;
             width: auto;
             border: 8px solid white;
@@ -55,8 +55,7 @@
 <body>
     <div class="image-container">
         <img 
-            src="images/Prank.jpg?height=800&width=1200" 
-            alt="Centered display image" 
+            src="images/Prank.jpg?height=800&width=1200"
             class="centered-image"
         >
     </div>

@@ -1,0 +1,67 @@
+{
+  "pets": [
+    {
+      "petName": "Spanky",
+      "age": "12 años",
+      "phoneNumber": "3326548203",
+      "ownerName": "Marco Ruvalcaba",
+      "image": "images/Pets.jpg?height=200&width=200"
+    },
+    {
+      "petName": "Anubis",
+      "age": "6 años",
+      "phoneNumber": "3326548203",
+      "ownerName": "Marco Ruvalcaba",
+      "image": "images/Pets.jpg?height=200&width=200"
+    },
+    {
+      "petName": "Zeus",
+      "age": "6 años",
+      "phoneNumber": "3326548203",
+      "ownerName": "Marco Ruvalcaba",
+      "image": "images/Pets.jpg?height=200&width=200"
+    },
+    {
+      "petName": "Aradia",
+      "age": "4 años",
+      "phoneNumber": "3326548203",
+      "ownerName": "Marco Ruvalcaba",
+      "image": "images/Pets.jpg?height=200&width=200"
+    },
+    {
+      "petName": "Tirya",
+      "age": "2 años",
+      "phoneNumber": "3326548203",
+      "ownerName": "Marco Ruvalcaba",
+      "image": "images/Pets.jpg?height=200&width=200"
+    },
+    {
+      "petName": "Tulus",
+      "age": "12 años",
+      "phoneNumber": "3326548203",
+      "ownerName": "Marco Ruvalcaba",
+      "image": "images/Pets.jpg?height=200&width=200"
+    },
+    {
+      "petName": "Molly",
+      "age": "4 años",
+      "phoneNumber": "3326548203",
+      "ownerName": "Marco Ruvalcaba",
+      "image": "images/Pets.jpg?height=200&width=200"
+    },
+    {
+      "petName": "Tonchis",
+      "age": "4 años",
+      "phoneNumber": "3326548203",
+      "ownerName": "Marco Ruvalcaba",
+      "image": "images/Pets.jpg?height=200&width=200"
+    },
+    {
+      "petName": "Rico",
+      "age": "1 año",
+      "phoneNumber": "3326548203",
+      "ownerName": "Marco Ruvalcaba",
+      "image": "images/Pets.jpg?height=200&width=200"
+    }
+  ]
+}
