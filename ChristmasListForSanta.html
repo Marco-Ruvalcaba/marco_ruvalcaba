@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christmas List For Santa</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .collage-container {
+      width: 100%;
+      min-height: 100vh;
+      position: relative;
+      padding: 20px;
+    }
+
+    .image-wrapper {
+      position: absolute;
+      /* Removed white border and border-radius for transparent PNGs */
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, z-index 0.3s ease;
+      overflow: hidden;
+    }
+
+    .image-wrapper:hover {
+      transform: scale(1.05) !important;
+      z-index: 100 !important;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Individual image positioning */
+    .img1 {
+      top: 5%;
+      left: 5%;
+      width: 350px;
+      height: 350px;
+      transform: rotate(-8deg);
+    }
+
+    .img2 {
+      top: 5%;
+      right: 10%;
+      width: 350px;
+      height: 350px;
+      transform: rotate(5deg);
+    }
+
+    .img3 {
+      top: 35%;
+      left: 15%;
+      width: 300px;
+      height: 260px;
+      transform: rotate(3deg);
+    }
+
+    .img4 {
+      top: 15%;
+      left: 35%;
+      width: 300px;
+      height: 300px;
+      transform: rotate(-5deg);
+    }
+
+    .img5 {
+      top: 39%;
+      right: 5%;
+      width: 240px;
+      height: 200px;
+      transform: rotate(7deg);
+    }
+
+    .img6 {
+      bottom: 5%;
+      left: 8%;
+      width: 250px;
+      height: 270px;
+      transform: rotate(-4deg);
+    }
+
+    .img7 {
+      bottom: 25%;
+      right: 20%;
+      width: 210px;
+      height: 210px;
+      transform: rotate(6deg);
+    }
+
+    .img8 {
+      bottom: 5%;
+      left: 32%;
+      width: 300px;
+      height: 300px;
+      transform: rotate(-7deg);
+    }
+
+    .img9 {
+      top: 58%;
+      left: 53%;
+      width: 230px;
+      height: 210px;
+      transform: translate(-10%, -10%) rotate(2deg);
+    }
+
+    .img10 {
+      top: 25%;
+      right: 30%;
+      width: 250px;
+      height: 250px;
+      transform: rotate(-10deg);
+    }
+
+    .img11 {
+      bottom: 35%;
+      left: 35%;
+      width: 195px;
+      height: 195px;
+      transform: rotate(8deg);
+    }
+
+    .img12 {
+      top: 60%;
+      right: 5%;
+      width: 300px;
+      height: 300px;
+      transform: rotate(-6deg);
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .image-wrapper {
+        width: 150px !important;
+        height: 150px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="collage-container">
+    <div class="image-wrapper img1">
+      <img src="images/Legos.webp?height=250&width=200" alt="Mountain landscape">
+    </div>
+    <div class="image-wrapper img2">
+      <img src="images/Legos.webp?height=250&width=200" alt="City skyline">
+    </div>
+    <div class="image-wrapper img3">
+      <img src="images/Legos.webp?height=250&width=200" alt="Tropical beach">
+    </div>
+    <div class="image-wrapper img4">
+      <img src="images/Legos.webp?height=250&width=200" alt="Coffee cup">
+    </div>
+    <div class="image-wrapper img5">
+      <img src="images/Legos.webp?height=250&width=200" alt="Forest path">
+    </div>
+    <div class="image-wrapper img6">
+      <img src="images/Legos.webp?height=250&width=200" alt="Vintage camera">
+    </div>
+    <div class="image-wrapper img7">
+      <img src="images/Legos.webp?height=250&width=200" alt="Colorful flowers">
+    </div>
+    <div class="image-wrapper img8">
+      <img src="images/Legos.webp?height=250&width=200" alt="Desert dunes">
+    </div>
+    <div class="image-wrapper img9">
+      <img src="images/Legos.webp?height=250&width=200" alt="Northern lights">
+    </div>
+    <div class="image-wrapper img10">
+      <img src="images/Legos.webp?height=250&width=200" alt="Bicycle">
+    </div>
+    <div class="image-wrapper img11">
+      <img src="images/Legos.webp?height=250&width=200" alt="Books">
+    </div>
+    <div class="image-wrapper img12">
+      <img src="images/Legos.webp?height=250&width=200" alt="Waterfall">
+    </div>
+  </div>
+</body>
+</html>
